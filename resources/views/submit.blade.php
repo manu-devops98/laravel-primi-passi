@@ -7,11 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Home</h1>
+    <h1>Iscriviti</h1>
     <ul>
-        @foreach ($links as $link)
-            <li><a href="{{$link['href']}}">{{$link['name']}}</a></li>
-        @endforeach
+        <li><a href="/">Home</a></li>
+        <li><a href="/privacy">Privacy</a></li>
+        <li><a href="/contatti">Contatti</a></li>
     </ul>
 </body>
 </html>

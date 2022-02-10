@@ -18,15 +18,37 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', function () {
-    $data= [
-        'name' => 'Manuel',
-        'lastname' => 'Cappello',
-        'age' => 23,
-        'skills' => [
-            'Javascript', 'HTML/CSS', 'PHP'
+    $data = [
+    'links' => [
+        [
+            'name' => 'Home',
+            'href' => '/'
         ],
+        [
+            'name' => 'Contatti',
+            'href' => '/contatti'
+        ],
+        [
+            'name' => 'Privacy',
+            'href' => '/privacy'
+        ],
+        [
+            'name' => 'Iscriviti',
+            'href' => '/iscriviti'
+        ],
+      ]
     ];
 
 
     return view('home', $data);
+});
+
+Route::get('/contatti', function () {
+    return view('contacts');
+});
+Route::get('/privacy', function () {
+    return view('privacy');
+});
+Route::get('/iscriviti', function () {
+    return view('submit');
 });
