@@ -7,6 +7,14 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Hello World!</h1>
+    <h1>Ciao {{ $name }} {{ $lastname }}</h1>
+    @if ($skills)
+    <h3>Skills:</h3>
+    <ul>
+        @foreach ($skills as $skill)
+        <li>{{ $skill }}</li>
+        @endforeach    
+    </ul>
+    @endif
 </body>
 </html>

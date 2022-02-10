@@ -18,5 +18,15 @@ use Illuminate\Support\Facades\Route;
 // });
 
 Route::get('/', function () {
-    return view('home');
+    $data= [
+        'name' => 'Manuel',
+        'lastname' => 'Cappello',
+        'age' => 23,
+        'skills' => [
+            'Javascript', 'HTML/CSS', 'PHP'
+        ],
+    ];
+
+
+    return view('home', $data);
 });
